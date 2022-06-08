@@ -6,7 +6,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { RouterModule } from '@angular/router';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
+    DashboardComponent,
   ],
-  imports: [BrowserModule, FormsModule, RouterModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
