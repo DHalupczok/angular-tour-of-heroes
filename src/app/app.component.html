@@ -1,8 +1,21 @@
 <!-- Toolbar -->
-<h1>{{ title }}</h1>
+<whatever></whatever>
 <nav>
   <a routerLink="/dashboard">Dashboard</a>
   <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/chart">Chart</a>
+  <a routerLink="/async-pipe">Async pipe</a>
 </nav>
 <router-outlet></router-outlet>
+<!--<div class="app-some-h2">
+</div>-->
+
+<!--<h1>
+  <div *ngFor="let element of componentList; index as i">
+    <div [class]="getElementClass(i)"></div>
+  </div>
+  <div [class]="getElementClass(3)" class="app-some-h2"></div>
+</h1>-->
+
+
 <app-messages></app-messages>

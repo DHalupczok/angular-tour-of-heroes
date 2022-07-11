@@ -1,0 +1,18 @@
+<p>my-first-chart works!</p>
+
+<div class="container">
+  <h1 class="text-info">Some example chart</h1>
+
+  <button (click)="OnAddNonImportantThings()" class="btn btn-primary" type="button">Dodaj nieważne rzeczy</button>
+  <button (click)="OnRemoveNonImportantThings()" class="btn btn-primary" type="button">Usuń nieważne rzeczy</button>
+  <button (click)="OnAddImportantThings()" class="btn btn-primary" type="button">Dodaj ważne rzeczy</button>
+  <button (click)="OnRemoveImportantThings()" class="btn btn-primary" type="button">Usuń rzeczy</button>
+  <button (click)="OnAddSuperImportantThings()" class="btn btn-primary" type="button">Dodaj super ważne rzeczy</button>
+  <button (click)="OnRemoveSuperImportantThings()" class="btn btn-primary" type="button">Usuń super ważne rzeczy
+  </button>
+  <button (click)="chartType='pie'" class="btn btn-primary" type="button">Wykres kołowy</button>
+  <button (click)="chartType='bar'" class="btn btn-primary" type="button">Wykres słupkowy</button>
+  <button (click)="chartType='polarArea'" class="btn btn-primary" type="button">Polar area</button>
+  <canvas [data]="data" [options]="options" [type]="chartType" baseChart></canvas>
+
+</div>
