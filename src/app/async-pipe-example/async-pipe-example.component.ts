@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, Observer } from "rxjs";
 
 @Component({
   selector: "app-async-pipe-example",
-  templateUrl: "./async-pipe-example.component.html",
+  template: "<p>Async data status:{{ data | async }}</p>",
   styleUrls: ["./async-pipe-example.component.scss"],
 })
 export class AsyncPipeExampleComponent {
@@ -16,8 +16,21 @@ export class AsyncPipeExampleComponent {
     setInterval(() => subscriber.next(observer()), 2000);
   });
 
+
+  time = new Observable<string>((observer: Observer<string>) => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });
+
+  observable = new Observable(function subscribe(subscriber) {
+    const id = setInterval(() => {
+      subscriber.next("hi");
+    }, 1000);
+  });
+
   constructor() {
   }
+
+  private randomNumber = () => Math.floor(Math.random()) * 10;
 
 
 }
