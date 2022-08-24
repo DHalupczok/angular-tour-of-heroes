@@ -19,7 +19,10 @@ import { SomeH4Component } from "./some-h4/some-h4.component";
 import { MyFirstChartComponent } from "./my-first-chart/my-first-chart.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgChartsModule } from "ng2-charts";
-import { AsyncPipeExampleComponent } from './async-pipe-example/async-pipe-example.component';
+import { AsyncPipeExampleComponent } from "./async-pipe-example/async-pipe-example.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { AsyncPipeExampleComponent } from './async-pipe-example/async-pipe-examp
     SomeH4Component,
     MyFirstChartComponent,
     AsyncPipeExampleComponent,
+    NameEditorComponent,
+    ProfileEditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ import { AsyncPipeExampleComponent } from './async-pipe-example/async-pipe-examp
     }),
     BrowserAnimationsModule,
     NgChartsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
