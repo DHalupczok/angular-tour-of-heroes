@@ -23,6 +23,7 @@ import { AsyncPipeExampleComponent } from "./async-pipe-example/async-pipe-examp
 import { ReactiveFormsModule } from "@angular/forms";
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { SomeFormContainerComponent } from './some-form-container/some-form-container.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     AsyncPipeExampleComponent,
     NameEditorComponent,
     ProfileEditorComponent,
+    SomeFormContainerComponent,
   ],
   imports: [
     BrowserModule,
