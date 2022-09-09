@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Injector } from "@angular/core";
 import { ReusableServiceDefaultService } from "../services/reusable-service-default.service";
-import { SearchServiceTokens } from "../services/reusableServiceInjectionToken";
+import { reusableServiceTokens } from "../services/reusableServiceInjectionToken";
 import { IReusableService } from "../services/IReusableService";
 
 @Component({
@@ -21,7 +21,7 @@ export class SelectInputComponent implements OnInit {
 
   ngOnInit() {
     const serviceToUse = this.useService || "default";
-    this.service = this.injector.get(SearchServiceTokens.get(serviceToUse));
+    this.service = this.injector.get(reusableServiceTokens.get(serviceToUse));
   }
 
   logTime() {

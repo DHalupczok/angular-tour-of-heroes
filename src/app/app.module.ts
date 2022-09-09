@@ -26,7 +26,7 @@ import { ProfileEditorComponent } from "./profile-editor/profile-editor.componen
 import { SomeFormContainerComponent } from "./some-form-container/some-form-container.component";
 import { SelectInputComponent } from "./select-input/select-input.component";
 import { ReusableServicesPageComponent } from "./reusable-services-page/reusable-services-page.component";
-import { SearchServiceTokens } from "./services/reusableServiceInjectionToken";
+import { reusableServiceTokens } from "./services/reusableServiceInjectionToken";
 import { ReusableServiceDefaultService } from "./services/reusable-service-default.service";
 import { ReusableServiceC } from "./services/reusableServiceC";
 import { ReusableServiceD } from "./services/reusableServiceD";
@@ -66,23 +66,23 @@ import { ReusableServiceBService } from "./services/reusable-service-b.service";
     ReactiveFormsModule,
   ],
   providers: [{
-    provide: SearchServiceTokens.get("default"),
+    provide: reusableServiceTokens.get("default"),
     useClass: ReusableServiceDefaultService,
   },
     {
-      provide: SearchServiceTokens.get("reusableServiceA"),
+      provide: reusableServiceTokens.get("reusableServiceA"),
       useClass: ReusableServiceAService,
     },
     {
-      provide: SearchServiceTokens.get("reusableServiceB"),
+      provide: reusableServiceTokens.get("reusableServiceB"),
       useClass: ReusableServiceBService,
     },
     {
-      provide: SearchServiceTokens.get("reusableServiceC"),
+      provide: reusableServiceTokens.get("reusableServiceC"),
       useClass: ReusableServiceC,
     },
     {
-      provide: SearchServiceTokens.get("reusableServiceD"),
+      provide: reusableServiceTokens.get("reusableServiceD"),
       useClass: ReusableServiceD,
     }],
   bootstrap: [AppComponent],

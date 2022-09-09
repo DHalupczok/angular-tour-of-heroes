@@ -1,11 +1,11 @@
 import { InjectionToken } from "@angular/core";
 import { IReusableService } from "./IReusableService";
 // Keep list of token, provider will give a implementation for each of them
-export const SearchServiceTokens: Map<string, InjectionToken<IReusableService>> = new Map();
+export const reusableServiceTokens: Map<string, InjectionToken<IReusableService>> = new Map();
 // Add File service implementation token
-SearchServiceTokens.set("default", new InjectionToken<IReusableService>("default"));
-SearchServiceTokens.set("reusableServiceA", new InjectionToken<IReusableService>("reusableServiceA"));
-SearchServiceTokens.set("reusableServiceB", new InjectionToken<IReusableService>("reusableServiceB"));
-SearchServiceTokens.set("reusableServiceC", new InjectionToken<IReusableService>("reusableServiceC"));
-SearchServiceTokens.set("reusableServiceD", new InjectionToken<IReusableService>("reusableServiceD"));
+reusableServiceTokens.set("default", new InjectionToken<IReusableService>("default"));
+reusableServiceTokens.set("reusableServiceA", new InjectionToken<IReusableService>("reusableServiceA"));
+reusableServiceTokens.set("reusableServiceB", new InjectionToken<IReusableService>("reusableServiceB"));
+reusableServiceTokens.set("reusableServiceC", new InjectionToken<IReusableService>("reusableServiceC"));
+reusableServiceTokens.set("reusableServiceD", new InjectionToken<IReusableService>("reusableServiceD"));
 
