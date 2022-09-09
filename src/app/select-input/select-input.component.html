@@ -1,0 +1,13 @@
+<div class="control-group d-flex flex-column justify-content-end h-100">
+  <label
+    [for]="inputId"
+    [ngClass]="{ 'un-indexed-label': isNotIndexed }"
+    class="d-block fw-bolder text-perfect-pepper-70"
+  >{{ labelName }}</label
+  >
+  <select (change)="logTime()" [id]="inputId" [name]="inputId" class="w-100">
+    <option *ngFor="let element of inputData; index as i" [value]="element">
+      {{ element }}
+    </option>
+  </select>
+</div>

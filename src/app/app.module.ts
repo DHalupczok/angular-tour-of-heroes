@@ -21,9 +21,15 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgChartsModule } from "ng2-charts";
 import { AsyncPipeExampleComponent } from "./async-pipe-example/async-pipe-example.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
-import { SomeFormContainerComponent } from './some-form-container/some-form-container.component';
+import { NameEditorComponent } from "./name-editor/name-editor.component";
+import { ProfileEditorComponent } from "./profile-editor/profile-editor.component";
+import { SomeFormContainerComponent } from "./some-form-container/some-form-container.component";
+import { SelectInputComponent } from "./select-input/select-input.component";
+import { ReusableServicesPageComponent } from "./reusable-services-page/reusable-services-page.component";
+import { SearchServiceTokens } from "./services/reusableServiceInjectionToken";
+import { ReusableServiceDefaultService } from "./services/reusable-service-default.service";
+import { ReusableServiceC } from "./services/reusableServiceC";
+import { ReusableServiceD } from "./services/reusableServiceD";
 
 @NgModule({
   declarations: [
@@ -42,6 +48,8 @@ import { SomeFormContainerComponent } from './some-form-container/some-form-cont
     NameEditorComponent,
     ProfileEditorComponent,
     SomeFormContainerComponent,
+    SelectInputComponent,
+    ReusableServicesPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,18 @@ import { SomeFormContainerComponent } from './some-form-container/some-form-cont
     NgChartsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: SearchServiceTokens.get("default"),
+    useClass: ReusableServiceDefaultService,
+  },
+    {
+      provide: SearchServiceTokens.get("reusableServiceC"),
+      useClass: ReusableServiceC,
+    },
+    {
+      provide: SearchServiceTokens.get("reusableServiceD"),
+      useClass: ReusableServiceD,
+    }],
   bootstrap: [AppComponent],
 })
 export class AppModule {
