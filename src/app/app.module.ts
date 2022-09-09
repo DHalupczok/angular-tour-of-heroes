@@ -30,6 +30,8 @@ import { SearchServiceTokens } from "./services/reusableServiceInjectionToken";
 import { ReusableServiceDefaultService } from "./services/reusable-service-default.service";
 import { ReusableServiceC } from "./services/reusableServiceC";
 import { ReusableServiceD } from "./services/reusableServiceD";
+import { ReusableServiceAService } from "./services/reusable-service-a.service";
+import { ReusableServiceBService } from "./services/reusable-service-b.service";
 
 @NgModule({
   declarations: [
@@ -67,6 +69,14 @@ import { ReusableServiceD } from "./services/reusableServiceD";
     provide: SearchServiceTokens.get("default"),
     useClass: ReusableServiceDefaultService,
   },
+    {
+      provide: SearchServiceTokens.get("reusableServiceA"),
+      useClass: ReusableServiceAService,
+    },
+    {
+      provide: SearchServiceTokens.get("reusableServiceB"),
+      useClass: ReusableServiceBService,
+    },
     {
       provide: SearchServiceTokens.get("reusableServiceC"),
       useClass: ReusableServiceC,

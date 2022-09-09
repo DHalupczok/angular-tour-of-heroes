@@ -10,7 +10,6 @@ export class ReusableServiceAService {
   }
 
   getCurrentTime() {
-    const time = new Date();
-    console.log("Time by reusable service A is ", time);
+    console.log("Hello I'm reusable Service A ");
   }
 }

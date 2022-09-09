@@ -9,7 +9,6 @@ export class ReusableServiceDefaultService {
   }
 
   getCurrentTime() {
-    const time = new Date();
-    console.log("Time by default reusable service is ", time);
+    console.log("Hello I'm default reusable Service ");
   }
 }

@@ -2,7 +2,6 @@ import { IReusableService } from "./IReusableService";
 
 export class ReusableServiceC implements IReusableService {
   getCurrentTime() {
-    const time = new Date();
-    console.log("Time by reusable service C is ", time);
+    console.log("Hello I'm reusable Service C ");
   }
 }

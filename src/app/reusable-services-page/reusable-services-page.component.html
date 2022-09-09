@@ -1,7 +1,18 @@
 <app-select-input [inputData]="['Option A', 'Option B', 'Option C']" inputId="1" labelName="For service A"
+                  useService="reusableServiceA">
+</app-select-input>
+<app-select-input [inputData]="['Option A', 'Option B', 'Option C']" inputId="1" labelName="For service A"
+                  useService="reusableServiceB">
+</app-select-input>
+
+
+<app-select-input [inputData]="['Option A', 'Option B', 'Option C']" inputId="3" labelName="For service C"
                   useService="reusableServiceC">
 </app-select-input>
-<app-select-input [inputData]="['Option 1', 'Option 2', 'Option 3']" inputId="2" labelName="For service B"
+<app-select-input [inputData]="['Option 1', 'Option 2', 'Option 3']" inputId="4" labelName="For service D"
                   useService="reusableServiceD">
 
+</app-select-input>
+<app-select-input [inputData]="['Option A', 'Option B', 'Option C']" inputId="5" labelName="Default reusable service"
+>
 </app-select-input>
